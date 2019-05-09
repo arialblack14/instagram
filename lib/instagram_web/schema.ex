@@ -3,6 +3,8 @@ defmodule InstagramWeb.Schema do
 
   alias InstagramWeb.Resolvers
 
+  import_types(__MODULE__.PostsTypes)
+
   query do
     @desc "Get list of photos"
     field :photos, list_of(:photo) do
